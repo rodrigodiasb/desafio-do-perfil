@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desafio do Perfil</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container" id="tela-inicial">
+    <h1>Desafio do Perfil</h1>
+    <button onclick="mostrarCadastro()">Iniciar Jogo</button>
+    <button onclick="mostrarRegras()">Regras</button>
+  </div>
+
+  <div class="container hidden" id="tela-cadastro">
+    <h2>Cadastro dos Jogadores</h2>
+    <div id="inputs-jogadores">
+      <input type="text" placeholder="Jogador 1" required>
+      <input type="text" placeholder="Jogador 2" required>
+    </div>
+    <button onclick="adicionarJogador()">+ Adicionar Jogador</button>
+    <button onclick="iniciarJogo()">Começar Partida</button>
+    <button onclick="voltarInicio()">Voltar</button>
+  </div>
+
+  <div class="container hidden" id="tela-jogo">
+    <h2 id="nome-jogador"></h2>
+    <p id="categoria"></p>
+    <p id="dica"></p>
+    <button onclick="proximaDica()">Próxima Dica</button>
+    <input type="text" id="resposta" placeholder="Sua resposta">
+    <button onclick="verificarResposta()">Confirmar</button>
+  </div>
+
+  <div class="container hidden" id="tela-placar">
+    <h2>Placar Parcial</h2>
+    <div id="placar"></div>
+    <button onclick="proximaRodada()">Próxima Rodada</button>
+  </div>
+
+  <div class="container hidden" id="tela-final">
+    <h2>Fim de Jogo</h2>
+    <div id="placar-final"></div>
+    <button onclick="reiniciar()">Jogar Novamente</button>
+    <button onclick="voltarInicio()">Voltar ao Início</button>
+  </div>
+
+  <script src="perguntas.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
